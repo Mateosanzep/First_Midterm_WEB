@@ -1,8 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 * {
     padding: 0;
     margin: 0;
 }
 
 body {
-    background-color: lightslategrey;
+    background-color: #ffffff;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    max-width: 1440px;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    color: #4c545d ;
+}
+p {
+    font-weight: 400;
+    color: #9fabb2 ;
+    margin: 2%;
+}
+
+.text{
+    margin: 5%;
+    padding: 0 20% 0 20%;
+}
+
+.top{
+    position: relative;
+    width: 100%;
+}
+
+.background {
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+}
+.mobile {
+    display: none;
+}
+.intro {
+    position: relative;
+    z-index: 1;
+}
+
+.img_logo_header {
+    width: 100px;
+    height: auto;
+    margin: 10% 0 0 0;
+}
+
+.track{
+    margin-top: 8%;
+}
+.pc_info {
+    display: flex;
+}
+.img_comp{
+    flex: 1;
+}
+.img_computer{
+    width: 100%;
+    height: auto;
+    position: relative;
+    right: 15%;
+}
+.pc_text_container{
+    flex: 1;
+    padding: 0 20% 0 5%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.pc_info{
+    flex: 1;
+}
+
+.devices{
+    margin-top: 8%;
+}
+.img_devices{
+    width: 70%;
+    height: auto;
+}
+.img_dev{
+    margin-top: 5%;
+}
+.workflow{
+    margin: 0 10% 10% 10%;
+}
+.workflow_info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5%;
+}
+.workflow_info > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.img_workflow{
+    margin: 15%;
+}
+
+.brands{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    margin: 10%;
+}
+
+.img_brands{
+    width: 120px;
+    height: auto;
+}
+
+.footer{
+    background-color: #F6F6F6;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3%;
+    margin-top: 7%;
+}
+.logo{
+    flex: 1;
+}
+.img_logo_footer{
+    width: 50px;
+    height: auto;
+}
+.footer_info{
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5%;
+}
+.footer_info a{
+    text-decoration: none;
+    color: #4c545d ;
+    font-weight: 600;
+    font-size: 14px;
+}
+.social_medias{
+    flex: 1;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 10%;
+}
+
+.img_social{
+    width: 18px;
+    height: auto;
+}
+
+.down_but {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  border-bottom: #4c545d99 2px solid;
+  transition: all 0.3s ease;
+}
+
+.ios_but {
+  background-color: #26baa4;
+  box-shadow: 0 10px 20px rgba(47, 216, 190, 0.267);
+}
+
+.ios_but:hover {
+  background-color: rgb(38, 176, 155);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(38, 186, 164, 0.374);
+}
+
+.mac_but {
+  background-color: #6173ff;
+  box-shadow: 0 10px 20px rgba(97, 115, 255, 0.4);
+}
+
+.mac_but:hover {
+  background-color: #4a5ee3;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(97, 115, 255, 0.5);
+}
+
+a:hover{
+    color: #26baa4;
+    transition: color 0.3s ease;
+}
+
+.social_medias a:hover{
+    transition: transform 0.3s ease;
+    filter: invert(53%) sepia(26%) saturate(1450%) hue-rotate(130deg) brightness(80%) contrast(100%);
+}
+
+@media screen and (max-width: 768px) {
+    .text, .pc_text_container {
+      padding: 0 5%;
+      margin: 5%;
+    }
+  
+    .background{
+    content: url('images/bg-header-mobile.png');
+    }
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .pc_info, .workflow_info, .brands, .footer {
+        flex-direction: column;
+        gap: 20%;
+    }
+
+    .down_but {
+        flex-direction: column;
+    }
+    
+    .pc_text_container {
+        text-align: center;
+    }
+
+    .img_computer {
+        right: 0;
+        width: 70%;
+    }
+    .img_logo_header{
+        width: 13%;
+    }
+
+    .img_logo_footer{
+        width: 10%;
+    }
+    .footer_info, .social_medias {
+        flex: initial;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 20%;
+    }
+
+    .footer_info a {
+        margin: 5% 0;
+    }
+
+    .img_brands {
+        width: 40%;
+        margin: 8% 0;
+    }
+
+    .btn{
+        align-self: center;
+        width: 50%;
+    }
+
+    .footer_info {
+        flex-direction: column;
+    }
 }
